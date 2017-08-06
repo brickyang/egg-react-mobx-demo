@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>{{ title }}</title>
+  <style>*{margin:0;padding:0;list-style-type:none;}html,body,#root{height:100%;}</style>
+  <link rel="stylesheet" href="{{ assets.main.css }}" media="screen" charset="utf-8">
+</head>
+<body>
+  <div id="root">{{ content | safe }}</div>
+  <script>window.__INITIAL_STATE__ = {{ initialStore | safe }}</script>
+  <script src="{{ assets.main.js }}"></script>
+</body>
+</html>
