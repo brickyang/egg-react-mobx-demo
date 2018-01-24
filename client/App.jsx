@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { observer } from 'mobx-react';
 import TodoListView from './TodoListView';
-import uniqueId from 'lodash.uniqueid';
 
 const styles = {
   wrapper: {
@@ -27,7 +25,6 @@ const styles = {
   },
 };
 
-@observer
 export default class App extends Component {
   render() {
     return (
@@ -36,12 +33,7 @@ export default class App extends Component {
           <TodoListView todoList={this.props.todoList} />
           <button
             style={styles.button}
-            onClick={() =>
-              this.props.todoList.todos.push({
-                title: 'a new task',
-                finished: false,
-                id: uniqueId('key-'),
-              })}
+            onClick={() => this.props.todoList.addTodo('new task')}
           >
             Click
           </button>
