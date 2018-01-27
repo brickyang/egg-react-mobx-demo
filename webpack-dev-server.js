@@ -10,7 +10,7 @@ const server = new WebpackDevServer(webpack(config), {
   quiet: true,
   stats: { colors: true },
   headers: { 'Access-Control-Allow-Origin': '*' },
-  disableHostCheck: true, // That solved it
+  disableHostCheck: true,
   compress: true,
 });
 

@@ -1,6 +1,6 @@
-# react-mobx-demo
-
 Demo of using egg.js, react and mobx with server-rendering.
+
+This is only a simplest example to show how these things work together. It keeps everything "original", exposed every config and details.
 
 ## QuickStart
 
@@ -14,8 +14,6 @@ $ open http://localhost:7001
 
 ### npm scripts
 
-- Use `npm run lint` to check code style.
-- Use `npm run autod` to auto detect dependencies upgrade, see [autod](https://www.npmjs.com/package/autod) for more detail.
-
+* Use `npm run lint` to check code style.
 
 [egg]: https://eggjs.org
