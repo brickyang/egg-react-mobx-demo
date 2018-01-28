@@ -1,15 +1,15 @@
 {
-    "files.exclude": {
-        "USE_GITIGNORE": true,
-        "**/*.js": {
-            "when": "$(basename).ts"
-        },
-        "**/*.map": true,
-        "run": true,
-        "logs": true,
-        "out": true,
-        "node_modules": true,
-        "coverage": true
+  "files.exclude": {
+    "USE_GITIGNORE": true,
+    "**/*.js": {
+      "when": "$(basename).ts"
     },
-    "prettier.eslintIntegration": true
+    "**/*.map": true,
+    "run": true,
+    "logs": true,
+    "out": true,
+    "node_modules": true,
+    "coverage": true
+  },
+  "prettier.eslintIntegration": true
 }

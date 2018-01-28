@@ -6,12 +6,14 @@ const path = require('path');
 const webpack = require('webpack');
 
 const paths = require('./paths');
-// const { webpack: { port } } = require('./config.default')
 
 module.exports = {
   context: paths.appSrc,
   devtool: 'cheap-module-source-map',
-  entry: './index',
+  entry: [
+    'webpack-hot-middleware/client?path=http://127.0.0.1:8080/__webpack_hmr&reload=true',
+    './index',
+  ],
   output: {
     filename: 'bundle.js',
     path: paths.appBuild,
@@ -76,6 +78,7 @@ module.exports = {
       'process.env': { NODE_ENV: JSON.stringify('development') },
     }),
     new CaseSensitivePathsPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
   ],
   node: {
