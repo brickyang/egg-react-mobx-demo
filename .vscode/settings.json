@@ -1,15 +1,17 @@
 {
-  "files.exclude": {
-    "USE_GITIGNORE": true,
-    "**/*.js": {
-      "when": "$(basename).ts"
+    "files.exclude": {
+        "USE_GITIGNORE": true,
+        "**/*.js": {
+            "when": "$(basename).ts"
+        },
+        "**/*.map": true,
+        "run": true,
+        "logs": true,
+        "out": true,
+        "node_modules/[^(e)]*": true,
+        "node_modules/e[_@.abcdefhijklmnopqrstuvwxyz]*": true,
+        "node_modules/egg-[_@.abcdefghijklmnopqrstuvxyz]*": true,
+        "coverage": true
     },
-    "**/*.map": true,
-    "run": true,
-    "logs": true,
-    "out": true,
-    "node_modules": true,
-    "coverage": true
-  },
-  "prettier.eslintIntegration": true
+    "prettier.eslintIntegration": true
 }

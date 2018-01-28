@@ -6,7 +6,7 @@ coverage/
 run/
 .DS_Store
 *.swp
-app/public/assets.*
+app/public/
 
 # General
 .DS_Store
