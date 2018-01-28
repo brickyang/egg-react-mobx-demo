@@ -46,11 +46,10 @@
     "node": ">=8.9.0"
   },
   "scripts": {
-    "clean": "rm -f app/public/*.js app/public/*.css",
     "start": "egg-scripts start",
     "stop": "egg-scripts stop",
-    "prebuild": "rm -rf build/*",
-    "build": "npm run clean && npm run webpack",
+    "prebuild": "rm -rf rm -f app/public/*",
+    "build": "npm run webpack",
     "webpack":
       "webpack --config config/webpack.config.js -p --progress --colors",
     "dev": "npm run dev-webpack & egg-bin dev",
