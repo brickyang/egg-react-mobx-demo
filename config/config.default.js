@@ -1,12 +1,10 @@
-exports.keys = '1501988934419_6659';
+const paths = require('./paths');
 
-exports.webpack = {
-  port: 8080,
-};
+exports.keys = '1501988934419_6659';
 
 exports.title = 'Todolist Demo';
 
-exports.assets = require('../app/public/assets.dev.json');
+exports.assets = paths.appBuild + '/assets.json';
 
 exports.view = {
   defaultExtension: '.njk',

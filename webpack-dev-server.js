@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
 
 const config = require('./config/webpack.config.dev');
-const { webpack: { port } } = require('./config/config.default');
+const port = 8080;
 
 const server = new WebpackDevServer(webpack(config), {
   publicPath: config.output.publicPath,

@@ -16,7 +16,7 @@ module.exports = app => {
 
       await ctx.render('index', {
         title: app.config.title,
-        assets: app.config.assets,
+        assets: require(app.config.assets),
         content,
         initialStore: JSON.stringify(initialStore),
       });

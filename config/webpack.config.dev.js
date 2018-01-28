@@ -6,7 +6,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 const paths = require('./paths');
-const { webpack: { port } } = require('./config.default');
+const port = 8080;
 
 module.exports = {
   context: paths.appSrc,
@@ -17,9 +17,9 @@ module.exports = {
     './index',
   ],
   output: {
-    filename: '[name].js',
+    filename: 'bundle.js',
     path: paths.appBuild,
-    publicPath: `http://localhost:${port}/app/public/`,
+    publicPath: `http://localhost:${port}/`,
   },
   resolve: {
     extensions: [ '.js', '.jsx', '.css' ],
@@ -72,8 +72,8 @@ module.exports = {
     ],
   },
   plugins: [
-    new assetsPlugin({ filename: 'assets.dev.json', path: paths.appBuild }),
-    new extractTextPlugin({ filename: '[name].css' }),
+    new assetsPlugin({ filename: 'assets.json', path: paths.appBuild }),
+    new extractTextPlugin({ filename: 'bundle.css' }),
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
