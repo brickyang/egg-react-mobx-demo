@@ -1,4 +1,4 @@
 exports.webpack = {
-    enable: true,
-    package: 'egg-webpack',
-}
+  enable: true,
+  package: 'egg-webpack',
+};

@@ -1,11 +1,11 @@
 exports.development = {
-    ignoreDirs: [ 'app/public', 'config' ],
-}
+  ignoreDirs: [ 'app/public', 'config' ],
+};
 
-const webpack = require('./webpack.config.dev.js')
+const webpack = require('./webpack.config.dev.js');
 exports.webpack = {
-    port: 8080,
-    publicPath: webpack.output.publicPath,
-    buildPath: webpack.output.path,
-    webpackConfigList: [ webpack ],
-}
+  port: 8080,
+  publicPath: webpack.output.publicPath,
+  buildPath: webpack.output.path,
+  webpackConfigList: [ webpack ],
+};

@@ -4,7 +4,7 @@ This is only a simplest example to show how these things work together. It keeps
 
 ### Branches
 
-You can see deffirent "stage" of this demo via deffirent branches.
+You can see different "stage" of this demo via different branches.
 
 * **master**: use `[egg-webpack][]` for compile and hot reload webpack in development. No client hot reload, no SSR.
 * **v1**: the "raw" version, everything is independent.

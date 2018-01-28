@@ -1,10 +1,10 @@
-exports.keys = '1501988934419_6659'
+exports.keys = '1501988934419_6659';
 
-exports.title = 'Todolist Demo'
+exports.title = 'Todolist Demo';
 
 exports.view = {
-    defaultExtension: '.njk',
-    defaultViewEngine: 'nunjucks',
-}
+  defaultExtension: '.njk',
+  defaultViewEngine: 'nunjucks',
+};
 
-exports.assets = require('./paths').appBuild + '/assets.json'
+exports.assets = require('./paths').appBuild + '/assets.json';
