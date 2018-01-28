@@ -48,7 +48,7 @@
   "scripts": {
     "start": "egg-scripts start",
     "stop": "egg-scripts stop",
-    "prebuild": "rm -rf rm -f app/public/*",
+    "prebuild": "rm -f app/public/*",
     "build": "npm run webpack",
     "webpack":
       "webpack --config config/webpack.config.js -p --progress --colors",
