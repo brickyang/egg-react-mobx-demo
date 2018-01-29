@@ -2,7 +2,6 @@ const assetsPlugin = require('assets-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const extractTextPlugin = require('extract-text-webpack-plugin');
-const path = require('path');
 const webpack = require('webpack');
 
 const paths = require('./paths');
