@@ -16,8 +16,10 @@ module.exports = {
   ],
   output: {
     filename: 'bundle.js',
-    path: paths.appBuild,
-    publicPath: '/public/',
+    path: paths.appBuild + '/',
+    // publicPath mube be consistent to path
+    // because of a bug in egg-webpack of parsing the path
+    publicPath: '/app/public/',
   },
   resolve: {
     extensions: [ '.js', '.jsx', '.css' ],
@@ -58,14 +60,6 @@ module.exports = {
           ],
         }),
         include: paths.appSrc,
-      },
-      {
-        test: /\.css$/,
-        loader: extractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: 'css-loader',
-        }),
-        include: path.resolve(__dirname, '../node_modules/antd/lib/'),
       },
     ],
   },
