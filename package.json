@@ -1,6 +1,6 @@
 {
   "name": "react-mobx-demo",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A simplest demo of using egg.js, react and mobx.",
   "dependencies": {
     "egg": "^2.3.0",

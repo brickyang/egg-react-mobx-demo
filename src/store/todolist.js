@@ -2,12 +2,12 @@ import { observable, computed, action } from 'mobx';
 import uniqueId from 'lodash.uniqueid';
 
 export default class TodoList {
-  constructor(items) {
-    this.items = items;
-  }
-
-  @observable todos = this.items || [];
+  @observable todos = [];
   @observable pendingRequests = 0;
+
+  constructor(todos) {
+    this.todos = todos;
+  }
 
   @computed
   get unfinishedTodoCount() {
