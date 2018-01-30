@@ -1,15 +1,16 @@
 {
-  "files.exclude": {
-    "USE_GITIGNORE": true,
-    "**/*.js": {
-      "when": "$(basename).ts"
+    "files.exclude": {
+        "USE_GITIGNORE": true,
+        "**/*.js": {
+            "when": "$(basename).ts"
+        },
+        "**/*.map": true,
+        "run": true,
+        "logs": true,
+        "out": true,
+        "node_modules": true,
+        "coverage": true
     },
-    "**/*.map": true,
-    "run": true,
-    "logs": true,
-    "out": true,
-    "node_modules": true,
-    "coverage": true
-  },
-  "prettier.eslintIntegration": true
+    "prettier.eslintIntegration": true,
+    "javascript.implicitProjectConfig.experimentalDecorators": true
 }
