@@ -1,12 +1,11 @@
-Demo of using egg.js, react and mobx with server-rendering.
+A todo list demo of using Egg.js, React and MobX altogether.
 
-This is only a simplest example to show how these things work together. It keeps everything "original", exposed every config and details.
+This repository keeps all different "stages" of this demo, so you can see the "evolution" path of it.
 
 ### Branches
 
-You can see different "stage" of this demo via different branches.
-
-* **master**: use [egg-webpack][] for compile and hot reloading webpack in development, no SSR.
+* **master**: rewrite with typescript (app & src). For using typescript in Egg.js please check [`egg-ts-boilerplate`](https://github.com/brickyang/egg-ts-boilerplate).
+* **v2**: use [egg-webpack][] for compile and hot reloading webpack in development, no SSR.
 * **v1**: the "raw" version, everything is independent.
 
 ### Installation

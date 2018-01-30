@@ -1,0 +1,15 @@
+{
+  "extends": ["tslint:latest", "tslint-config-prettier"],
+  "linterOptions": {
+    "exclude": ["lib/plugin/**/*.ts"]
+  },
+  "rules": {
+    "curly": [true, "ignore-same-line"],
+    "no-this-assignment": [true, { "allow-destructuring": true }],
+    "member-access": [false],
+    "object-literal-sort-keys": false,
+    "no-invalid-template-strings": false,
+    "no-implicit-dependencies": [true, "dev"],
+    "variable-name": [true, "allow-leading-underscore", "allow-pascal-case"]
+  }
+}

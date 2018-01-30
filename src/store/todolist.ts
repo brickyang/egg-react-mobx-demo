@@ -1,5 +1,5 @@
-import { observable, computed, action } from 'mobx';
-import uniqueId from 'lodash.uniqueid';
+import * as uniqueId from 'lodash.uniqueid';
+import { action, computed, observable } from 'mobx';
 
 export default class TodoList {
   @observable todos = [];

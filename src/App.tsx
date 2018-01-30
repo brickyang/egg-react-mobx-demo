@@ -1,7 +1,11 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 import TodoListView from './TodoListView';
 
-const styles = {
+const styles: {
+  wrapper: object;
+  container: object;
+  button: object;
+} = {
   wrapper: {
     backgroundColor: '#0277bd',
     height: '100%',
@@ -25,7 +29,11 @@ const styles = {
   },
 };
 
-export default class App extends Component {
+interface IProps {
+  todoList: any;
+}
+
+export default class App extends React.Component<IProps, {}> {
   render() {
     return (
       <div style={styles.wrapper}>

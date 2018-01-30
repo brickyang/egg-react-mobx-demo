@@ -1,7 +1,9 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
+import * as React from 'react';
 
+interface IProps {
+  todoList: any;
+}
 const styles = {
   ul: {
     backgroundColor: 'white',
@@ -19,13 +21,13 @@ const styles = {
 };
 
 @observer
-export default class TodoListView extends Component {
+export default class TodoListView extends React.Component<IProps, {}> {
   render() {
     return (
       <ul style={styles.ul}>
-        {this.props.todoList.todos.map(todo =>
+        {this.props.todoList.todos.map(todo => (
           <TodoView todo={todo} key={todo.id} />
-        )}
+        ))}
         <p style={styles.text}>
           Tasks left: {this.props.todoList.unfinishedTodoCount}
         </p>
@@ -34,7 +36,7 @@ export default class TodoListView extends Component {
   }
 }
 
-const TodoView = observer(({ todo }) =>
+const TodoView = observer(({ todo }) => (
   <li style={styles.li}>
     <input
       style={{ marginRight: '10px' }}
@@ -45,8 +47,4 @@ const TodoView = observer(({ todo }) =>
     />
     {todo.title}
   </li>
-);
-
-TodoListView.propTypes = {
-  todoList: PropTypes.object.isRequired,
-};
+));
