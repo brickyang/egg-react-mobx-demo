@@ -1,0 +1,43 @@
+html {
+  font-family: sans-serif;
+}
+
+.wrapper {
+  background-color: #0277bd;
+  height: 100%;
+}
+.container {
+  width: 300px;
+  margin-right: auto;
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-top: 150px;
+}
+
+.button {
+  padding: 8px 50px;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid grey;
+  margin-top: 10px;
+  box-shadow: 0 2px 10px #757575;
+}
+
+ul {
+  background-color: white;
+  border-radius: 4;
+  box-shadow: inset 0 0 1px grey;
+}
+
+li {
+  padding: 12px 22px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.counter {
+  font-size: 14px;
+  padding: 10px 20px;
+  text-align: right;
+}

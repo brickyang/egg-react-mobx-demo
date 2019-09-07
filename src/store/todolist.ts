@@ -1,11 +1,12 @@
-import * as uniqueId from 'lodash.uniqueid';
+import uniqueId from 'lodash.uniqueid';
 import { action, computed, observable } from 'mobx';
 
-export default class TodoList {
-  @observable todos = [];
-  @observable pendingRequests = 0;
+import { ITodoItem } from '../../typings';
 
-  constructor(todos) {
+export default class TodoList {
+  @observable todos: ITodoItem[] = [];
+
+  constructor(todos: ITodoItem[]) {
     this.todos = todos;
   }
 
@@ -15,7 +16,7 @@ export default class TodoList {
   }
 
   @action
-  addTodo(title) {
+  addTodo(title: string) {
     this.todos.push({
       title,
       finished: false,

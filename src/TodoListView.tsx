@@ -1,34 +1,15 @@
 import { observer } from 'mobx-react';
 import * as React from 'react';
 
-interface IProps {
-  todoList: any;
-}
-const styles = {
-  ul: {
-    backgroundColor: 'white',
-    borderRadius: 4,
-    boxShadow: 'inset 0 0 1px grey',
-  },
-  li: {
-    padding: '12px 22px',
-    borderBottom: '1px solid #E0E0E0',
-  },
-  text: {
-    padding: '10px 20px',
-    textAlign: 'right',
-  },
-};
-
 @observer
 export default class TodoListView extends React.Component<IProps, {}> {
   render() {
     return (
-      <ul style={styles.ul}>
+      <ul>
         {this.props.todoList.todos.map(todo => (
           <TodoView todo={todo} key={todo.id} />
         ))}
-        <p style={styles.text}>
+        <p className="counter">
           Tasks left: {this.props.todoList.unfinishedTodoCount}
         </p>
       </ul>
@@ -37,7 +18,7 @@ export default class TodoListView extends React.Component<IProps, {}> {
 }
 
 const TodoView = observer(({ todo }) => (
-  <li style={styles.li}>
+  <li>
     <input
       style={{ marginRight: '10px' }}
       readOnly
@@ -48,3 +29,7 @@ const TodoView = observer(({ todo }) => (
     {todo.title}
   </li>
 ));
+
+interface IProps {
+  todoList: any;
+}
