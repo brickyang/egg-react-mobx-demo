@@ -1,6 +1,6 @@
 {
   "name": "react-mobx-demo",
-  "version": "3.1.0",
+  "version": "4.0.0",
   "description": "A simple todo list demo of using Egg.js, React and MobX.",
   "egg": {
     "typescript": true,

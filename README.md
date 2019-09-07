@@ -4,7 +4,8 @@ This repository keeps all different "stages" of this demo, so you can see the "e
 
 ### Branches
 
-- **master**: rewrite with Typescript. To use Typescript in Egg.js please check [`egg-ts-boilerplate`](https://github.com/brickyang/egg-ts-boilerplate).
+- **master**: update to SSR(server-side rendering).
+- **v3**: rewrite with Typescript. To use Typescript in Egg.js please check [`egg-ts-boilerplate`](https://github.com/brickyang/egg-ts-boilerplate).
 - **v2**: use [egg-webpack][] for compile and hot reloading webpack in development, no SSR.
 - **v1**: the "raw" version, everything is independent.
 
